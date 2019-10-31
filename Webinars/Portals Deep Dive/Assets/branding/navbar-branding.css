@@ -1,0 +1,5 @@
+.navbar-static-top.navbar-inverse {
+    /* background-color: #001479; */
+    border-color: transparent;
+    background-image: linear-gradient(red, yellow);
+}
