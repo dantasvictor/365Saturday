@@ -1,0 +1,9 @@
+$(document).ready(function (){
+   $(".entitylist.entity-grid").on("loaded", function () {
+      $(this).children(".view-grid").find("td[data-attribute='casetypecode']").each(function (i, e){
+         var value = $(this).html();
+         if(value=="Question")$(this).html("<div style='text-align:center;'>Question <span title='Question' class='fa fa-question-circle'></span></div>");
+         else if (value=="Problem")  $(this).html("<div style='text-align:center;'> Problem <span title='Problem' class='fa fa-exclamation-circle'></span></div>");
+      });
+   });
+});

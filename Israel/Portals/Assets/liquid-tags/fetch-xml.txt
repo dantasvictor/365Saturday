@@ -1,0 +1,27 @@
+{% extends 'Layout 1 Column' %}
+{% block main %}
+  {% fetchxml contact_query %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="contact">
+    <attribute name="fullname" />
+    <attribute name="parentcustomerid" />
+    <attribute name="telephone1" />
+    <attribute name="emailaddress1" />
+    <attribute name="contactid" />
+    <attribute name="address1_postalcode" />
+    <attribute name="address1_line1" />
+    <attribute name="address1_city" />
+    <order attribute="fullname" descending="false" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+    {% assign contacts= contact_query.results.entities %}
+{% for account in primaryaccounts %}
+            {% assign account_id = account.accountid %}
+            <script>
+                window.location.replace( '/wbp-information-change/?id={{account_id}}');
+            </script>
+        {% endfor %}

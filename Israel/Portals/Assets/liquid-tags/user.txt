@@ -1,0 +1,12 @@
+https://victoriasdemo.powerappsportals.com/liquid-user-variables/
+
+{% if user %}
+
+Hello, {{ user.fullname }}!
+
+{% else %}
+
+Hello, anonymous user!
+
+{% endif %}
+

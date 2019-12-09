@@ -1,0 +1,3 @@
+https://victoriasdemo.powerappsportals.com/powerbi-sample/
+
+{% powerbi path:"https://app.powerbi.com/view?r=eyJrIjoiM2M3OTAxNzQtZjMyYS00ZWQxLThlMjgtN2NmZWUyOTI1NWJmIiwidCI6IjgwMTVlYjYwLTFmNTktNGNiOC1iNDlmLWVhY2Y4MDJhMTYwMSIsImMiOjN9" %}

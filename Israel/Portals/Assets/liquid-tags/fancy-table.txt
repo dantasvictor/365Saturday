@@ -1,0 +1,38 @@
+{% extends 'Layout 1 Column' %}
+{% block main %}
+  {% include 'Page Copy' %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <div class="container">
+    <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Customer</th>
+                <th>Ticket Number</th>
+                <th>Created On</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Title</th>
+                <th>Customer</th>
+                <th>Ticket Number</th>
+                <th>Created On</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            jQuery.support.cors = true;
+            $('#example').DataTable( {
+                "ajax": {
+                            url:'https://portalstraining.powerappsportals.com/json-fancy-table/',
+                            type: "POST"
+                        }
+            } );
+        } );
+    </script>
+{%endblock%}
